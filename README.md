@@ -29,7 +29,7 @@ Project/
 |-- Proteus-Simulation/
 |-- Video/
 |-- README.md
-|-- EXPLAIN.md
+|-- Rationale.md
 ```
 
 * **Calculations** → Circuit calculations and component selection.

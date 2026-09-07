@@ -66,7 +66,7 @@ A demonstration of the circuit is available in:
 
 My Explanation of how the mechanism of the circuit works.
 
-`EXPLAIN.md`
+`Rationale.md`
 
 ## What I Learned
 
