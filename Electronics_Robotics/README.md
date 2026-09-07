@@ -16,11 +16,3 @@ Projects may include:
 * Design explanations
 * Photos and videos
 * Practical test results
-
-## Purpose
-
-This repository serves as a record of what I build and learn — from individual electronic circuits to complete robotic systems.
-
-The focus is not only on the final result, but also on the **reasoning, experimentation, failures, and improvements** behind each project.
-
-More projects will be added as I continue learning and building.
