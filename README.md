@@ -1,47 +1,15 @@
-# Circuit Projects
+# Projects
 
-This repository contains my electronics and circuit projects, simulations, calculations, and practical experiments.
+This directory is where I keep the projects I've worked on throughout my learning journey.
 
-## Projects
+It includes things I've built, programmed, designed, experimented with, and explored. Some projects are small experiments, while others are larger builds that bring together multiple concepts and skills.
 
-### 01. Astable Multivibrator
+The projects cover different areas and technologies, and there isn't a fixed structure for them. Each one is organized in the way that makes the most sense for that particular project.
 
-A transistor-based astable multivibrator that continuously switches between two states, producing an oscillating output.
+I use this directory to keep track of what I've made, what I've learned from it, and how my work develops over time.
 
-**Includes:**
-
-* Circuit calculations
-* Proteus simulation
-* Practical implementation
-* Demonstration video
-
-📁 `Astable-Multivibrator/`
+Some projects are finished, some are still being improved, and others are simply experiments that helped me learn something new.
 
 ---
 
-## Structure
-
-Each project is organized into:
-
-```text
-Project/
-|-- Calculations/
-|-- Proteus-Simulation/
-|-- Video/
-|-- README.md
-|-- Rationale.md
-```
-
-* **Calculations** → Circuit calculations and component selection.
-* **Proteus-Simulation** → Proteus projects, simulations.
-* **Video** → Demonstrations.
-* **README.md** → Documentation for the project.
-* **Rationale.md** → Explanation of the circuit.
-
----
-
-## Goal
-
-The goal of this repository is to document my progress in electronics by building circuits, simulating them, calculating their values, and testing them practically.
-
-More projects will be added as I build and learn.
+**Let's Do Cool Shit**
