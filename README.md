@@ -36,7 +36,7 @@ Project/
 * **Proteus-Simulation** → Proteus projects, simulations.
 * **Video** → Demonstrations.
 * **README.md** → Documentation for the project.
-* **EXPLAIN.md** → Explanation of the circuit.
+* **Rationale.md** → Explanation of the circuit.
 
 ---
 
