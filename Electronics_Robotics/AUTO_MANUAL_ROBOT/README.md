@@ -58,16 +58,15 @@ AUTO-MANUAL-Robot/
 │   └── robot.ino
 ├── docs/
 │   ├── wiring.md
-│   └── design.md
+│   
 └── media/
 	└── robot.jpg
-        └── demo.mp4
+       └── demo.mp4
 ```
 
 ## Documentation
 
 * [Wiring & Pinout](docs/wiring.md)
-* [Technical Design](docs/design.md)
 
 ---
 
