@@ -1,90 +1,64 @@
 # Arduino Nano Robot — Wiring & Pinout
 
-## Arduino Nano Pinout
+## Arduino Nano
 
-| Nano Pin | Function   | Connected To  |
-| -------- | ---------- | ------------- |
-| D2       | Left TRIG  | HC-SR04 Left  |
-| D4       | Front TRIG | HC-SR04 Front |
-| D5       | ENA (PWM)  | L298N         |
-| D6       | ENB (PWM)  | L298N         |
-| D7       | IN1        | L298N         |
-| D8       | IN2        | L298N         |
-| D9       | Right TRIG | HC-SR04 Right |
-| D10      | Front ECHO | HC-SR04 Front |
-| D11      | Right ECHO | HC-SR04 Right |
-| D12      | IN3        | L298N         |
-| D13      | IN4        | L298N         |
-| A0       | S2         | TCS3200       |
-| A1       | S3         | TCS3200       |
-| A2       | OUT        | TCS3200       |
-| A3       | Left ECHO  | HC-SR04 Left  |
-| A4       | SDA        | I2C LCD       |
-| A5       | SCL        | I2C LCD       |
+| Pin | Connection                   |
+| --- | ---------------------------- |
+| D0  | HC-05 TX                     |
+| D1  | HC-05 RX via voltage divider |
+| D2  | Left TRIG                    |
+| D4  | Front TRIG                   |
+| D5  | L298N ENA                    |
+| D6  | L298N ENB                    |
+| D7  | L298N IN1                    |
+| D8  | L298N IN2                    |
+| D9  | Right TRIG                   |
+| D10 | Front ECHO                   |
+| D11 | Right ECHO                   |
+| D12 | L298N IN3                    |
+| D13 | L298N IN4                    |
+| A0  | TCS3200 S2                   |
+| A1  | TCS3200 S3                   |
+| A2  | TCS3200 OUT                  |
+| A3  | Left ECHO                    |
+| A4  | LCD SDA                      |
+| A5  | LCD SCL                      |
 
----
+## HC-05
 
-## HC-SR04 ×3
+| HC-05 | Connection                  |
+| ----- | --------------------------- |
+| TX    | Nano D0                     |
+| RX    | Nano D1 via voltage divider |
+| VCC   | 5V                          |
+| GND   | Common GND                  |
 
-### Front
+`9600 baud`
 
-| Sensor | Nano       |
-| ------ | ---------- |
-| TRIG   | D4         |
-| ECHO   | D10        |
-| VCC    | 5V         |
-| GND    | Common GND |
+## HC-SR04
 
-### Right
+| Sensor | TRIG | ECHO |
+| ------ | ---- | ---- |
+| Left   | D2   | A3   |
+| Front  | D4   | D10  |
+| Right  | D9   | D11  |
 
-| Sensor | Nano       |
-| ------ | ---------- |
-| TRIG   | D9         |
-| ECHO   | D11        |
-| VCC    | 5V         |
-| GND    | Common GND |
+VCC → 5V
+GND → Common GND
 
-### Left
+## L298N
 
-| Sensor | Nano       |
-| ------ | ---------- |
-| TRIG   | D2         |
-| ECHO   | A3         |
-| VCC    | 5V         |
-| GND    | Common GND |
+| L298N | Nano       |
+| ----- | ---------- |
+| ENA   | D5         |
+| IN1   | D7         |
+| IN2   | D8         |
+| ENB   | D6         |
+| IN3   | D12        |
+| IN4   | D13        |
+| GND   | Common GND |
 
----
-
-## L298N Motor Drivers
-
-### Control
-
-| Nano | L298N |
-| ---- | ----- |
-| D5   | ENA   |
-| D7   | IN1   |
-| D8   | IN2   |
-| D6   | ENB   |
-| D12  | IN3   |
-| D13  | IN4   |
-| GND  | GND   |
-
-
----
-
-## LM2596 Buck Converter
-
-```text
-Battery + → Switch → IN+
-Battery - ─────────→ IN-
-
-OUT+ → 5V Rail
-OUT- → Common GND
-```
-
-5V rail → Arduino Nano, HC-SR04 ×3, TCS3200, LCD.
-
----
+Motor supply → Battery
 
 ## TCS3200
 
@@ -96,9 +70,7 @@ OUT- → Common GND
 | VCC     | 5V         |
 | GND     | Common GND |
 
----
-
-## 16×2 I2C LCD
+## I2C LCD
 
 | LCD | Nano       |
 | --- | ---------- |
@@ -107,19 +79,19 @@ OUT- → Common GND
 | VCC | 5V         |
 | GND | Common GND |
 
-I2C address: `0x27`
+Address: `0x27`
 
----
-
-## Power & Ground
+## Power
 
 ```text
-Battery
-  │
-  ├── (+) → Master Switch → L298N
-  │                       → LM2596 → 5V Rail
-  │
-  └── (-) ──────────────── Common GND
+Battery + → Master Switch → L298N
+                         → LM2596 IN+
+
+Battery - ───────────────→ LM2596 IN-
+
+LM2596 OUT+ → 5V Rail
+LM2596 OUT- → Common GND
 ```
 
-**All components share the same GND.**
+**All components share Common GND.**
+
